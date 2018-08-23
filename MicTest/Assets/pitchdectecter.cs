@@ -12,9 +12,9 @@ using UnityEngine;
     private const float RefValue = 0.1f;
     private const float Threshold = 0.02f;
 
-    float[] _samples;
-    private float[] _spectrum;
-    private float _fSample;
+    protected float[] _samples;
+    protected float[] _spectrum;
+    protected float _fSample;
 
     void Start()
     {
@@ -23,12 +23,12 @@ using UnityEngine;
         _fSample = AudioSettings.outputSampleRate;
     }
 
-    void Update()
+    protected void getAnalyzeSound()
     {
-        AnalyzeSound();
+         AnalyzeSound();
     }
 
-    void AnalyzeSound()
+    private void AnalyzeSound()
     {
         GetComponent<AudioSource>().GetOutputData(_samples, 0); // fill array with samples
         int i;

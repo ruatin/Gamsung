@@ -232,3 +232,4 @@ MonoBehaviour:
   - 0
   - 0
   timeSpeed: 40
+  defaultValue: 0
